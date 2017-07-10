@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Contents of the Login table:
+  table
+    tr
+      th UserID
+      th Username
+    for result in results
+      tr
+       td= result.LoginId
+       td= result.Username
+    else
+      td
+        tr Sorry, no users!
